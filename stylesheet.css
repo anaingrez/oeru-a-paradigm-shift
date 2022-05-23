@@ -38,6 +38,13 @@
     --bottom-circle-inner: 15%;
 }
 
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -46,9 +53,9 @@ body {
     text-rendering: optimizelegibility;
     background-color: rgb(205, 199, 175);
     background-image:
-    radial-gradient(circle at 2% 10%, rgb(26, 18, 17) var(--top-circle-inner), transparent 70%),
-    radial-gradient(circle at 89% 100%, rgb(26, 18, 17) var(--bottom-circle-inner), transparent 80%),
-    url(assets/background.png);
+        radial-gradient(circle at 2% 10%, rgb(26, 18, 17) var(--top-circle-inner), transparent 70%),
+        radial-gradient(circle at 89% 100%, rgb(26, 18, 17) var(--bottom-circle-inner), transparent 80%),
+        url(assets/background.png);
 }
 
 .video {
@@ -83,7 +90,8 @@ li {
     padding: 0px;
     cursor: pointer;
     transition: all 0.5s ease;
-    min-width: 25px; /* Mudar para largura do titulo*/
+    min-width: 25px;
+    /* Mudar para largura do titulo*/
 }
 
 li.active {
