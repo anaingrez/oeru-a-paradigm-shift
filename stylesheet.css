@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'PPEiko';
+    src: url('fonts/PPEiko-Medium.otf') format('opentype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'PPEiko';
+    src: url('fonts/PPEiko-BlackItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'PPEiko';
+    src: url('fonts/PPEiko-Heavy.otf') format('opentype');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'PPEiko';
+    src: url('fonts/PPEiko-LightItalic.otf') format('opentype');
+    font-style: italic;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'PPEiko';
+    src: url('fonts/PPEiko-Thin.otf') format('opentype');
+    font-style: normal;
+    font-weight: 100;
+}
+
+:root {
+    --top-circle-inner: 15%;
+    --bottom-circle-inner: 15%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "PPEiko";
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    background-color: rgb(205, 199, 175);
+    background-image:
+    radial-gradient(circle at 2% 10%, rgb(26, 18, 17) var(--top-circle-inner), transparent 70%),
+    radial-gradient(circle at 89% 100%, rgb(26, 18, 17) var(--bottom-circle-inner), transparent 80%),
+    url(assets/noise.svg);
+}
+
+.video {
+    align-self: flex-end;
+    margin: 5vh;
+}
+
+.text {
+    align-self: flex-start;
+    max-width: 100vh;
+}
+
+p {
+    font-style: normal;
+    font-weight: 100;
+}
+
+ul {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    margin-left: 4vh;
+}
+
+li {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    min-width: 25px; /* Mudar para largura do titulo*/
+}
+
+li.active {
+    flex: 20;
+    /*reduzir aqui*/
+    cursor: default;
+}
+
+li.active .section-content {
+    flex: 20;
+    /*reduzir aqui*/
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transform: scaleX(1);
+    font-size: medium;
+    color: rgb(205, 199, 175);
+}
+
+li .section-title {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 100;
+    width: 100%;
+    margin: 0;
+    color: rgb(205, 199, 175);
+    border-left: 2px solid rgb(205, 199, 175);
+}
+
+:not(li.active)>.section-title:hover {
+    padding-top: 65vh;
+}
+
+:not(li.active)>.section-title {
+    transition: padding-top 3s ease-in-out;
+}
+
+li .first {
+    border-style: none;
+}
+
+li .section-title h1 {
+    margin: 5vh 0vh 5vh 1vh;
+    font-size: 15pt;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: start;
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 300;
+}
+
+li .section-content {
+    flex: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: all 0.25s 0.1s ease-out;
+    font-size: 0pt;
+    min-width: none;
+}
