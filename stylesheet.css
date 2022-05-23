@@ -43,14 +43,12 @@ body {
     margin: 0;
     font-family: "PPEiko";
     -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizelegibility;
     background-color: rgb(205, 199, 175);
     background-image:
     radial-gradient(circle at 2% 10%, rgb(26, 18, 17) var(--top-circle-inner), transparent 70%),
     radial-gradient(circle at 89% 100%, rgb(26, 18, 17) var(--bottom-circle-inner), transparent 80%),
-    url(assets/noise.svg);
+    url(assets/background.png);
 }
 
 .video {
@@ -60,7 +58,7 @@ body {
 
 .text {
     align-self: flex-start;
-    max-width: 100vh;
+    max-width: 90vh;
 }
 
 p {
@@ -148,5 +146,5 @@ li .section-content {
     opacity: 0;
     transition: all 0.25s 0.1s ease-out;
     font-size: 0pt;
-    min-width: none;
+    /* min-width: none; */
 }
