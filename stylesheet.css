@@ -58,8 +58,24 @@ body {
         url(assets/background.png);
 }
 
+img {
+    max-height: 40vh;
+    margin-right: 2vh;
+}
+
+.project {
+    /* display: flex; */
+    /* align-self: center; */
+    flex-direction: row;
+}
+
 .video {
     align-self: flex-end;
+    margin: 5vh;
+}
+
+.video-gabinete {
+    align-self: center;
     margin: 5vh;
 }
 
@@ -67,6 +83,17 @@ body {
     align-self: flex-start;
     max-width: 90vh;
 }
+
+.section-content {
+    margin: 0vh 2vh 0vh 2vh;
+}
+
+.side {
+    max-width: 70vh;
+    margin-right: 2vh;
+    /* align-self: flex-end; */
+}
+
 
 p {
     font-style: normal;
