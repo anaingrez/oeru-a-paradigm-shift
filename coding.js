@@ -2,6 +2,9 @@ var section = $('li');
 
 function toggleAccordion() {
     section.removeClass('active');
+    section.addClass('hidden');
+
+    $(this).removeClass('hidden');
     $(this).addClass('active');
 }
 
