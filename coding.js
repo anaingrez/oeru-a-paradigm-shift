@@ -22,10 +22,10 @@ root.addEventListener("mousemove", e => {
 });
 
 // /*Size is  set in pixels... supports being written as: '250px' */
-// var magnifierSize = 200;
+// var magnifierSize = 250;
 
 // /*How many times magnification of image on page.*/
-// var magnification = 3;
+// var magnification = 4;
 
 // function magnifier() {
 
